@@ -1,27 +1,26 @@
 import React from 'react';
 // import circul from '../../assets/images/image.png'
-import HomeImg from '../../assets/images/Home.png'
+import HomeImg from '../../assets/images/home.png'
 // import Background from '../../assets/images/background.png'
-import HTML from '../../assets/images/HTML.webp'
-import Css from '../../assets/images/CSS.jpg'
-import JS from '../../assets/images/Js.png'
-import ReactJs from '../../assets/images/React.png'
-import Node from '../../assets/images/Node.png'
-import Mongo from '../../assets/images/Mongo.png'
-import Express from '../../assets/images/Express.png'
-import Redux from '../../assets/images/Redux.png'
-
+import html from '../../assets/images/html.webp';
+import css from '../../assets/images/css.jpg';
+import js from '../../assets/images/js.png';
+import reactImg from '../../assets/images/react.png';
+import node from '../../assets/images/node.png';
+import mongo from '../../assets/images/mongo.png';
+import express from '../../assets/images/express.png';
+import redux from '../../assets/images/redux.png';
 
 const Skills = [
-    { name: "HTML", icon: HTML },
-    { name: "Css", icon: Css },
-    { name: "Java Script", icon: JS },
-    { name: "React.js", icon: ReactJs },
-    { name: "Node.js", icon: Node },
-    { name: "MongoDB", icon: Mongo },
-    { name: "Redux Toolkit", icon: Redux },
-    { name: "Express", icon: Express }
-]
+    { name: "HTML", icon: html },
+    { name: "CSS", icon: css },
+    { name: "JavaScript", icon: js },
+    { name: "React.js", icon: reactImg },
+    { name: "Node.js", icon: node },
+    { name: "MongoDB", icon: mongo },
+    { name: "Redux Toolkit", icon: redux },
+    { name: "Express", icon: express }
+];
 
 function Home(props) {
     return (
@@ -64,17 +63,19 @@ function Home(props) {
                         amet consectetur adipisicing elit. Quaerat, soluta
                     </p>
                     <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12 px-6">
-                        {Skills.map((v, i) => (
-                            <div className="bg-gray-200 dark:bg-red-900 p-6 rounded-xl flex flex-col items-center hover:scale-105 transition duration-300">
-                                <img
-                                    src={v.icon}
-                                    className="w-16 h-16 mb-4 object-cover"
-                                />
-                                <h3 className="text-xl font-semibold dark:text-white">
-                                    {v.name}
-                                </h3>
-                            </div>
-                        ))}
+                        {
+                            Skills.map((v, i) => (
+                                <div className="bg-gray-200 dark:bg-red-900 p-6 rounded-xl flex flex-col items-center hover:scale-105 transition duration-300">
+                                    <img
+                                        src={v.icon}
+                                        className="w-16 h-16 mb-4 object-cover"
+                                    />
+                                    <h3 className="text-xl font-semibold dark:text-white">
+                                        {v.name}
+                                    </h3>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </section>
