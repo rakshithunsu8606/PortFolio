@@ -2,25 +2,26 @@ import React from 'react';
 // import circul from '../../assets/images/image.png'
 import HomeImg from '../../assets/images/home.png'
 // import Background from '../../assets/images/background.png'
-import html from '../../assets/images/html.webp';
-import css from '../../assets/images/css.jpg';
-import js from '../../assets/images/js.png';
-import reactImg from '../../assets/images/react.png';
-import node from '../../assets/images/node.png';
-import mongo from '../../assets/images/mongo.png';
-import express from '../../assets/images/express.png';
-import redux from '../../assets/images/redux.png';
+import { FaReact } from "react-icons/fa";
+import { DiNodejs } from "react-icons/di";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaJs } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { IoLogoHtml5 } from "react-icons/io5";
+import { FaCss3Alt } from "react-icons/fa";
 
 const Skills = [
-    { name: "HTML", icon: html },
-    { name: "CSS", icon: css },
-    { name: "JavaScript", icon: js },
-    { name: "React.js", icon: reactImg },
-    { name: "Node.js", icon: node },
-    { name: "MongoDB", icon: mongo },
-    { name: "Redux Toolkit", icon: redux },
-    { name: "Express", icon: express }
+    { icon: IoLogoHtml5, name: "HTML", color: "#e54c21" },
+    { icon: FaCss3Alt, name: "CSS", color: "#214ce5" },
+    { icon: FaJs, name: "JavaScript", color: "#f7e025" },
+    { icon: FaReact, name: "ReactJs", color: "#58c4dc" },
+    { icon: DiNodejs, name: "NodeJS", color: "#499542" },
+    { icon: SiExpress, name: "Express", color: "#f7e025" },
+    { icon: SiMongodb, name: "MongoDB", color: "#00ed64" },
+    { icon: SiRedux, name: "Redux", color: "#7b50bd" }
 ];
+
 
 function Home(props) {
     return (
@@ -65,11 +66,13 @@ function Home(props) {
                     <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12 px-6">
                         {
                             Skills.map((v, i) => (
-                                <div className="bg-gray-200 dark:bg-red-900 p-6 rounded-xl flex flex-col items-center hover:scale-105 transition duration-300">
-                                    <img
-                                        src={v.icon}
-                                        className="w-16 h-16 mb-4 object-cover"
+                                <div key={i} className="bg-gray-200 dark:bg-red-900 p-6 rounded-xl flex flex-col items-center hover:scale-105 transition duration-300">
+
+                                    <v.icon
+                                        className="w-16 h-16 mb-4"
+                                        style={{ color: v.color }}
                                     />
+
                                     <h3 className="text-xl font-semibold dark:text-white">
                                         {v.name}
                                     </h3>
