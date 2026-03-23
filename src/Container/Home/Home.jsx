@@ -28,7 +28,7 @@ function Home(props) {
             <section>
                 <div className="container mx-auto grid grid-cols-12">
 
-                    <div className="lg:col-span-6 mt-21">
+                    <div className="col-span-6 mt-21">
                         <button className='inline-block px-6 py-2 text-red-600  border  border-gray-500  rounded-4xl'>
                             Unique One
                         </button>
@@ -42,7 +42,7 @@ function Home(props) {
                         </button>
                     </div>
 
-                    <div className="lg:col-span-6 col-start-9  ">
+                    <div className="col-start-8 col-end-12  ">
                         <div className='w-[600px] h-[500px] mt-18'>
                             <img
                                 src={HomeImg} alt="" className='w-full h-full object-cover rounded-2xl'
