@@ -1,6 +1,6 @@
 import React from 'react';
 // import circul from '../../assets/images/image.png'
-import HomeImg from '../../assets/images/home.png'
+import Hero from '../../assets/images/Hero.png'
 // import Background from '../../assets/images/background.png'
 import { FaReact } from "react-icons/fa";
 import { DiNodejs } from "react-icons/di";
@@ -46,7 +46,7 @@ function Home(props) {
                     <div className="col-start-8 col-end-12  ">
                         <div className='w-[600px] h-[500px] mt-18'>
                             <img
-                                src={HomeImg} alt="" className='w-full h-full object-cover rounded-2xl'
+                                src={Hero} alt="" className='w-full h-full object-cover rounded-2xl'
                             />
                         </div>
                     </div>
